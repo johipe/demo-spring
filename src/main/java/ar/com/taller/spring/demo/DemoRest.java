@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoRest {
 
-    @RequestMapping(value = "/hola{nombre}", method = RequestMethod.GET)
+    @RequestMapping(value = "/hola/{nombre}", method = RequestMethod.GET)
     public String holamundo(@PathVariable String nombre){
-        return "hola mundo";
+        return "hola {nomnbre}";
     }
 }
